@@ -14,3 +14,36 @@
         <a href="https://vimeo.com" target="_blank" title="Watch on Vimeo"><span class="fa fa-vimeo fa-fw" aria-hidden="true"></span></a>
       </div><!-- End social media buttons class -->
 </div><!-- End banner div -->
+
+<script>
+// Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
+function topNavResponsive() {
+    var responsive = document.getElementById("topNav");
+    if (responsive.className === "topnav") {
+        responsive.className += " responsive";
+    } else {
+        responsive.className = "topnav";
+    }
+}
+
+// Hide logo section of banner on scroll
+$(window).on("scroll", function() {
+	if($(window).scrollTop() > 50) {
+		$(".banner, .banner-header, .homepage-title, .title, .share-buttons").addClass("active");
+	} else {
+		//remove the background property so it becomes visible again, defined in main.css
+		$(".banner, .banner-header, .homepage-title, .title, .share-buttons").removeClass("active");
+	}
+});
+
+// Make nav transparent on scroll
+$(window).on("scroll", function() {
+	if($(window).scrollTop() > 50) {
+		$(".topnav").addClass("active");
+	} else {
+		//remove the background property so it becomes transparent again, defined in main.css
+		$(".topnav").removeClass("active");
+	}
+});
+	
+</script>
