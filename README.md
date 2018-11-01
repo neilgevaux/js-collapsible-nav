@@ -1,2 +1,1 @@
-# js-collapsible-nav
-# js-collapsible-nav
+Responsive navbar template for websites
